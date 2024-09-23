@@ -3,22 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bill Calculator</title>
+    <title>Calculator Factura</title>
     <link rel="stylesheet" href="style.css" />
-    <style></style>
   </head>
   <body>
     <div class="container">
       <h2>Calculator Factura</h2>
 
       <label for="baseAmount">Base (B.I):</label>
-      <input
-        type="number"
-        id="baseAmount"
-        placeholder="Base Amount (e.g. 11980.23)"
-      />
+      <input type="number" id="baseAmount" placeholder="Base (e.g. 11980.23)" />
 
-      <button id="calculateBill">Calcular Total</button>
+      <button id="calculateBill">Total</button>
 
       <div class="result" id="result">
         <p>Base: <span id="baseAmountDisplay">€0.00</span></p>
@@ -30,7 +25,7 @@
         </p>
         <p>IRPF Deduction (-1%): <span id="irpfDisplay">€0.00</span></p>
         <p>IVA (x21%): <span id="vatDisplay">€0.00</span></p>
-        <p>Total factura: <span id="totalDisplay">€0.00</span></p>
+        <p>Total factura con IVA: <span id="totalDisplay">€0.00</span></p>
       </div>
     </div>
 
