@@ -1,3 +1,3 @@
 # Factura Calculator
 
-[live] (https://sabovoichita.github.io/factura-calculator/)
+[live](https://sabovoichita.github.io/factura-calculator/)
