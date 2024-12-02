@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function calculateBill(baseAmount, costeRemolque) {
+  function calculateBill(baseAmount) {
     const VAT_RATE = 21 / 100; // 21% VAT (IVA)
     const IRPF_RATE = 1 / 100; // 1% IRPF
 
-    const baseImponible = baseAmount - costeRemolque;
+    const baseImponible = baseAmount;
 
     const irpfDeduction = baseImponible * IRPF_RATE;
 
@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleCalculateBill() {
     const baseAmountInput = document.getElementById("baseAmount").value;
-    const costeRemolque = 300; // Fixed towing cost (€300)
 
     const baseAmount = parseFloat(baseAmountInput);
 
@@ -31,14 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const result = calculateBill(baseAmount, costeRemolque);
+    const result = calculateBill(baseAmount);
 
     document.getElementById(
       "baseAmountDisplay"
     ).textContent = `€${result.baseAmount}`;
-    document.getElementById(
-      "remolqueDisplay"
-    ).textContent = `-€${costeRemolque.toFixed(2)}`;
+
     document.getElementById(
       "baseImponibleDisplay"
     ).textContent = `€${result.baseImponible}`;
